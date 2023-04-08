@@ -21,6 +21,7 @@ public class Garage{
      * private classType [] varName = new classType[size];
      *
      */
+    
 
     /************ Part 2 **************/
     /**
@@ -31,6 +32,7 @@ public class Garage{
      * public dataType varName= value;
      *
      */
+
 
     /************ Part 3 **************/
     /**
@@ -45,6 +47,9 @@ public class Garage{
      *     }
      *}
      */
+    
+    
+
 
     /************ Part 4 **************/
     /**
@@ -59,6 +64,8 @@ public class Garage{
      * Syntax:
      * public void methodName(String m)
      */
+    
+    
 
 
     /************ Part 5 **************/
@@ -71,6 +78,7 @@ public class Garage{
      * public void methodName(String m)
      *
      */
+   
 
 
 
@@ -84,6 +92,8 @@ public class Garage{
      * public void methodName(String m)
      *
      */
+    
+
 
 
     /************ Part 7 **************/
@@ -95,6 +105,62 @@ public class Garage{
      * public void methodName(String m)
      *
      */
+
+
+    
+
+ public static int countCars=0; 
+private Cars[] thecars; 
+public Garages(){ 
+thecars= new Cars[3]; 
+}  
+public void addCar(String model){ 
+boolean found = false; 
+for(int i=0;i<countCars;i++){ 
+if (thecars[i].getModel().equals(model)){ 
+found=true; 
+thecars[i].moveCarIn(); 
+} 
+} 
+if(!found){ 
+if(countCars<thecars.length){ 
+Cars c = new Cars(); 
+c.setModel(model); 
+thecars[countCars]=c; 
+thecars[countCars].moveCarIn(); 
+countCars++; 
+} 
+else{ 
+System.out.println("Full garage"); 
+} 
+} 
+} 
+public void moveOut(String model){ 
+for(int i=0;i<countCars;i++){ 
+if (thecars[i].getModel().equals(model)){ 
+thecars[i].moveCarOut(); 
+} 
+} 
+ 
+}
+
+
+public void moveIn(String model){ 
+for(int i=0;i<countCars;i++){ 
+if (thecars[i].getModel().equals(model)){ 
+thecars[i].moveCarIn(); 
+} 
+} 
+ 
+} 
+public void listCars(){ 
+System.out.println("All cars in the Garage are : "); 
+for(int i=0;i<countCars;i++){ 
+if (thecars[i].getFlag()) 
+System.out.println("car "+(i+1)+": "+thecars[i].getModel()); 
+} 
+}
+    
 
 
 

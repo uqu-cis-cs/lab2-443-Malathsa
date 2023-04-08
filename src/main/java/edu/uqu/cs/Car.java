@@ -22,6 +22,7 @@ public class Car{
      *
      */
 
+   
     /************ Part 2 **************/
     /**
      * Define a default constructor and set 
@@ -33,6 +34,7 @@ public class Car{
      *      //body
      * }
      */
+    
 
     /************ Part 3 **************/
     /**
@@ -43,6 +45,8 @@ public class Car{
      *      return this.InstanceVariableName;
      * }
      */
+   
+
 
 
     /************ Part 4 **************/
@@ -54,7 +58,7 @@ public class Car{
      * }
      *
      */
-
+   
 
     /************ Part 5 **************/
     /**
@@ -63,7 +67,30 @@ public class Car{
      * moveCarIn() to set the inOutGarage flag to true;
      *
      */
-
-
-
+    
+private String model; 
+private boolean flag; 
+public Cars(){ 
+flag=false; 
+model=""; 
+}  
+public void moveCarOut() { 
+flag=false; 
+ 
+} 
+public void moveCarIn() { 
+flag=true; 
+} 
+public String getModel(){ 
+return model; 
+} 
+public void setModel(String m){ 
+model=m; 
+} 
+public boolean getFlag(){ 
+return flag; 
+} 
+public void setFlag(boolean f){ 
+flag=f; 
+} 
 }
